@@ -1,0 +1,611 @@
+p {
+    margin: 0;
+}
+
+html, body {
+    font-family: sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background: #eee;
+}
+
+body::-webkit-scrollbar-thumb {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #b0b0b0;
+}
+
+body::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-attachment: scroll;
+    min-width: 320px;
+    background-color: #ddd;
+}
+
+#load {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: url("../img/Loading_icon.gif") no-repeat center center rgba(255, 255, 255, 1);
+}
+
+#backmenus {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+#corgradiente {
+    position: relative;
+    min-height: 452px;
+    height: 100%;
+    background-image: linear-gradient(0deg, #ddd, #eee);
+}
+
+.headermenu {
+    z-index: 3;
+    background-color: #1e293b;
+    height: 50px;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#btniconeCONFIG {
+    display: block;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    float: left;
+}
+
+#btniconeCOMODOS {
+    display: block;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    float: right;
+}
+
+#iconeCONFIG {
+    height: 80%;
+    margin-top: 10%;
+}
+
+#iconeCOMODOS {
+    height: 80%;
+    margin-top: 10%;
+}
+
+.headercategoriascomodos {
+    z-index: 1;
+    position: relative;
+    display: block;
+    background-color: #1e293b;
+    height: 15%;
+    max-height: 70px;
+}
+
+#listaservicosporcomodo {
+    background-image: linear-gradient(0deg, #1A2333, transparent);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#listaservicosporcomodo li {
+    height: 100%;
+    margin: 0 5px;
+}
+
+.btndalistadeservicosporcomodo {
+    padding-bottom: 5px;
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    margin: 0 2%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+
+.btndalistadeservicosporcomodo img {
+    height: 100%;
+    padding: 10%;
+}
+
+.nomelistaambiente p {
+    padding-left: 1%;
+    margin: 2%;
+}
+
+.editarnomelistaambiente {
+    width: 100%;
+    padding-left: 1%;
+    margin: 1% 2%;
+}
+
+.inputeditarip {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.inputdoeditarnome {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.complementolistaambiente {
+    width: 50%;
+}
+
+#ullistaambiente {
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.statusdoaparelho p {
+    margin: 0;
+    font-size: 0.6em;
+    color: white;
+}
+
+.selecaoindividual {
+    text-align: center;
+}
+
+.selecaoindividual div {
+    margin:auto;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+}
+.selecaoindividual p {
+    height: 10px;
+    font-size: 10px;
+}
+.selecaoindividual input {
+    background-color: transparent;
+    width: 100%;
+    height: 30px;
+    border: none;
+}
+
+.statusdoaparelho {
+    float: right;
+    min-width: 70px;
+    max-width: 150px;
+    margin: 7px 5%
+}
+
+.btnright {
+    border-radius: 5px;
+    height: 26px;
+    width: 75px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.editar {
+    background-color: #4E6C8E;
+}
+
+.off {
+    background-color: #aa0027;
+}
+
+.on {
+    background-color: #7cb731;
+}
+
+.defeito {
+    background-color: grey;
+}
+
+.row {
+    margin-top: 5px;
+}
+
+#nomedocomodo p {
+    margin: 0;
+}
+
+#nomedocomodo {
+    font-size: 2.5em;
+    color: white;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.filtrado{
+    border-bottom: 5px solid white;
+    padding-bottom: 0;
+}
+.divlistaambiente {
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    background-color: white;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    height: 40px;
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+    min-width: 280px;
+    max-width: 700px;
+}
+
+.editarsensor {
+    border-bottom: 1px solid #ccc;
+    border: none;
+    font-size: 1em;
+    background-color: #f8f8f8 !important;
+    margin-top: 0.3% !important;
+    height: inherit !important;
+}
+
+.editarsensor div {
+    display: inline-block;
+    margin: 2px 15px;
+}
+
+.editarsensor form {
+    color: gray;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.editarsensor select {
+    color: black !important;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+}
+
+.editarsensor input {
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    background-color: #ddd;
+    border: none;
+    margin: 5px 0;
+    width: 45px;
+}
+
+.btncasas:active {
+    background-color: #ccc;
+}
+
+.pcasas {
+    margin: auto;
+    color: black;
+}
+
+li {
+    display: inline;
+}
+
+#listamenudecomodos {
+    padding-top: 50px;
+    display: none;
+    background-image: linear-gradient(180deg, #4e6c8e, #435d7a);
+    margin-top: -50px;
+    height: 100%;
+    width: 40%;
+    min-height: 30px;
+    max-width: 150px;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    min-width: 128px;
+}
+
+.btnmenusconfig {
+    width: 100%;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #435d7a;
+    height: 5%;
+    max-height: 55px;
+    min-height: 40px;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: #4e6c8e;
+}
+
+.btnmenuscomodos {
+    width: 100%;
+    border-bottom: 1px solid #435d7a;
+    height: 5%;
+    max-height: 55px;
+    min-height: 40px;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: #4e6c8e;
+}
+
+.btnmenusconfig:hover {
+    border-right: 3px solid white;
+    padding-right: 3px;
+}
+
+.configactive {
+    border-right: 7px solid white;
+    padding-right: 7px;
+}
+
+.btnmenuscomodos:hover {
+    border-left: 3px solid white;
+    padding-left: 3px;
+}
+
+.comodoactive {
+    border-left: 7px solid white;
+    padding-left: 7px;
+}
+
+.btnmenusconfig p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.btnmenuscomodos p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+#listamenudeconfig {
+    animation-name: fadeInLeft;
+    animation-duration: 150ms;
+    padding-top: 50px;
+    display: none;
+    background-image: linear-gradient(180deg, #4e6c8e, #435d7a);
+    margin-top: -50px;
+    height: 100%;
+    width: 40%;
+    min-height: 30px;
+    max-width: 150px;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    min-width: 128px;
+}
+
+#footerbtneditando {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    margin-left: -125px;
+}
+
+#divbtneditando {
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btneditando {
+    border-radius: 10px;
+    color: white;
+    background-color: #4e6c8e;
+    padding: 2px 8px;
+    outline: none;
+    border: none;
+    margin: 0 2px;
+}
+
+.btneditando p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#footerbtneditar {
+    bottom: 0;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btneditar {
+    color: #98c9da;
+    background-color: #333;
+    position: relative;
+    width: 40%;
+    max-width: 135px;
+    height: 7%;
+    max-height: 60px;
+    outline: none;
+    border: none;
+    bottom: 0;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btneditar p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.permissoescasas {
+    width: 75% !important;
+    max-width: 675px !important;
+    min-width: 260px !important;
+    background-color: #f7f7f7 !important;
+    margin-top: 3px !important;
+}
+
+.permissoescasas p {
+    font-size: 0.8em;
+    padding-left: 2%;
+}
+
+.permissoescomodos {
+    padding-right: 10px !important;
+    width: 70% !important;
+    max-width: 650px !important;
+    min-width: 240px !important;
+    background-color: #f2f2f2 !important;
+    margin-top: 3px !important;
+}
+
+.permissoescomodos p {
+    font-size: 0.8em;
+    padding-left: 2%;
+}
+.somecomodo{
+    display: none !important;
+}
+.somefilter{
+    display: none !important;
+}
+#sensores {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(0, rgba(160, 160, 160, 1), rgba(160, 160, 160, 0.85));
+}
+
+#insensores {
+    overflow-x: auto;
+    display: inherit;
+    margin: auto;
+    height: inherit;
+    overflow-y: hidden;
+}
+
+.divsensores {
+    display: inherit;
+    width: initial;
+    padding: 6px 12px;
+    height: 50px;
+}
+
+.divsensores p {
+    color: white;
+}
+
+.divsensores img {
+    padding-right: 5px;
+    margin-right: 5px;
+    height: 100%;
+    max-width: 40px;
+    border-right: 1px solid white;
+}
+
+.widthinherit{
+    width:inherit;
+}
+
+.nomelistaambiente {
+    /* flex*/
+    display: flex;
+}
+
+.statusdoaparelho {
+    /* flex*/
+    display: flex;
+}
+
+.editardoaparelho {
+    /* flex*/
+    display: flex;
+}
+
+#footerbtneditando {
+    /* flex*/
+    display: none;
+}
+
+#footerbtneditar {
+    /* flex*/
+    display: flex;
+}
+
+.divmudarip {
+    display: none;
+}
+
+@media (min-width: 0) {
+    #footerbtneditando {
+        margin-top: 2%;
+    }
+    #footerbtneditar {
+        margin-top: 2%;
+    }
+}
+
+@media (min-width: 1000px) {
+    #footerbtneditando {
+        margin-top: 1%;
+    }
+    #footerbtneditar {
+        margin-top: 1%;
+    }
+}

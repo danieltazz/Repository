@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Domótica</title>
+  <!--link rel="stylesheet" href="bootstrap.min.css"-->
+  <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="estilosregras.css">
+  <link rel="stylesheet" href="animate.css">
+
+
+</head>
+<body>
+<div id="load"></div>
+<div id="backmenus" style="display:none;"></div>
+
+	<header class="headermenu">
+		<button id="btniconeCONFIG">
+			<img id="iconeCONFIG" src="img/icone-CONFIG.svg"></button>
+
+<ul id="regras">
+  <li><a href="#regra1">regra1</a></li>
+  <li><a href="#regra2">regra2</a></li>
+  <li><a href="#regra3">regra3</a></li>
+  <li><a href="#regradoquarto">regradoquarto</a></li>
+  <li><a href="#regradasala">regradasala</a></li>
+  <li><a href="#regra4">regra4</a></li>
+  <li><a href="#regra5">regra5</a></li>
+  <li><button id="btnadd"> <img src="img/add.svgz"></button></li>
+</ul>
+	</header>
+
+	<div id="listamenudeconfig">
+		<a href="ambiente.html">
+		<button class="btnmenusconfig">
+			<p>Controles</p>
+		</button>
+		</a>
+		<a href="sensores.html">
+		<button class="btnmenusconfig">
+			<p>Sensores</p>
+		</button>
+		</a>
+		<button class="btnmenusconfig">
+			<p>Perfil</p>
+		</button>
+		<a href="Casas.html">
+		<button class="btnmenusconfig">
+			<p>Casas</p>
+		</button>
+		</a>
+		<a href="subperfis.html">
+		<button class="btnmenusconfig">
+			<p>Sub-perfis</p>
+		</button>
+		</a>
+		<a href="regras.html">
+		<button class="btnmenusconfig">
+			<p>Regras</p>
+		</button>
+		</a>
+
+	</div>
+<div id="hipertipo">
+	<div id="tipos">
+	<button>
+		<img src="img/icondo.svgz">	
+	</button>
+	<button>
+		<img src="img/iconif.svgz">
+	</button>
+	<button >	
+		<img src="img/iconlogic.svgz">	
+	</button>
+		
+	</div>
+
+
+
+	<div id="subtipos">
+
+	<div><div id="and"  class="blocoslogicos" draggable="true" ondragstart="drag(event)">
+    	<button id="andin" class="in"></button>
+		<img class="imgblocoslogicos" 
+		src="img/iconlogicand.svgz" draggable="false" >
+		<button id="andin" class="in"></button>	
+	</div></div>
+
+	<div><div id="or" class="blocoslogicos" 
+	draggable="true" ondragstart="drag(event)">	
+    	<button id="orin" class="in"></button>
+		<img class="imgblocoslogicos" 
+		src="img/iconlogicor.svgz"
+		draggable="false">
+		<button id="orin" class="in"></button>	
+	</div></div>
+
+	<div><div id="time" class="blocoslogicos" 
+	draggable="true" ondragstart="drag(event)">	
+    	<button id="orin" class="in"></button>
+		<img class="imgblocoslogicos" 
+		src="img/icontime.svgz"
+		draggable="false">
+		<button id="orin" class="in"></button>	
+	</div></div>
+	
+	<div><div id="presence" class="blocoslogicos" 
+	draggable="true" ondragstart="drag(event)">	
+    	<button id="orin" class="in"></button>
+		<img class="imgblocoslogicos" 
+		src="img/iconpresence.svgz"
+		draggable="false">
+		<button id="orin" class="in"></button>	
+	</div></div>
+
+	<div><div id="lightday" class="blocoslogicos" 
+	draggable="true" ondragstart="drag(event)">	
+    	<button id="orin" class="in"></button>
+		<img class="imgblocoslogicos" 
+		src="img/iconday.svgz"
+		draggable="false">
+		<button id="orin" class="in"></button>	
+	</div></div>
+	
+	<div><div id="lightnight" class="blocoslogicos" 
+	draggable="true" ondragstart="drag(event)">	
+    	<button id="orin" class="in"></button>
+		<img class="imgblocoslogicos" 
+		src="img/iconnight.svgz"
+		draggable="false">
+		<button id="orin" class="in"></button>	
+	</div></div>
+	
+	<div><div id="atuardorlamp" class="blocoslogicos" 
+	draggable="true" ondragstart="drag(event)">	
+		<img class="imgblocoslogicosatuadores" 
+		src="img/icone-lamp.svgz"
+		draggable="false">	
+	</div></div>
+	
+	<div><div id="atuadorterm" class="blocoslogicos" 
+	draggable="true" ondragstart="drag(event)">	
+		<img class="imgblocoslogicosatuadores" 
+		src="img/icone-termometro.svgz"
+		draggable="false">	
+	</div></div>
+	
+		
+	</div>
+</div>	
+	<div class="row">
+
+	<button id="back">
+		<img src="img/refazer.svgz">
+	</button>
+<div id="conteudoif" style="height:250px; width:860px; margin:5px auto; display:flex; background-color: #cfcfcf; border-top-left-radius: 50px; border-bottom-left-radius: 50px;padding: 5px;">
+
+<img src="img/iconif.svgz" style="    
+	margin: auto;
+    margin-left: -40px;
+    height: 80px;">
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+
+
+</div>
+
+<div id="conteudodo" style="height:170px; width:860px; margin:5px auto; display:flex; background-color: #cfcfcf; border-top-left-radius: 50px; border-bottom-left-radius: 50px;padding: 5px;">
+<img src="img/icondo.svgz" style="    
+	margin: auto;
+    margin-left: -40px;
+    height: 80px;">
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="coluna">
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="divdrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+</div>
+</div>
+<div class="popupselect">
+	<button></button>
+</div>
+
+		<!-- jQuery -->
+	    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+	var idregras = 1;
+	function allowDrop(ev) {
+	  ev.preventDefault();
+	}
+
+	function drag(ev) {
+	  ev.dataTransfer.setData("text/html", ev.target.	id);
+	}
+
+	function drop(ev) {
+	  	ev.preventDefault();
+	  	alert(document.getElementById(data));
+		var str = document.getElementById(data);
+	    var patt1 = /[1-9999999]/;
+	    var result = str.match(patt1);
+	    if(result!=null){
+	    	/* The default handling is not to process a drop action and hand it to the next 
+   			 higher html element in your DOM. */
+		  /* Here, we prevent the default behaviour in order to process the event within 
+		     this handler and to stop further propagation of the event. */
+		  /* In the drag event, we set the *variable* (it is not a variable name but a 
+		     format, please check the reference!) "text/html", now we read it out */
+		  var data=ev.dataTransfer.getData("text/html");
+		  /* As we put the ID of the source element into this variable, we can now use 
+		     this ID to manipulate the dragged element as we wish. */
+		  /* Let's just move it through the DOM and append it here */
+		  ev.target.appendChild(document.getElementById(data));
+	    }
+	    else{
+			  var data=ev.dataTransfer.getData("text/html");
+			  /* If you use DOM manipulation functions, their default behaviour it not to 
+			   copy but to alter and move elements. By appending a ".cloneNode(true)", 
+			   you will not move the original element, but create a copy. */
+			  var nodeCopy = document.getElementById(data).cloneNode(true);
+			  nodeCopy.id =  fatherid+idregras; 
+			idregras++;
+			  ev.target.appendChild(nodeCopy);
+		}
+	}
+
+
+			document.onreadystatechange = function(){
+				var state = document.readyState
+				if (state == 'complete'){
+					document.getElementById('interactive');
+					document.getElementById('load').style.visibility="hidden";
+				}
+			}
+
+
+		$(document).ready(function () {
+
+			$("#backmenus").click(function (a){
+				a.preventDefault();
+				$("#listamenudeconfig").toggle();
+				$("#backmenus").toggle();
+			});
+
+			$("#btniconeCONFIG").click(function (a){
+				a.preventDefault();
+				$("#listamenudeconfig").toggle();
+				$("#backmenus").toggle();
+			});
+			$("#editar").click(function (a){
+				a.preventDefault();
+				$("#footerbtneditando").toggle();
+				$("#footerbtneditar").toggle();
+				$(".nomelistaambiente").toggle();
+				$(".editarnomelistaambiente").toggle();
+				$(".statusdoaparelho").toggle();
+				$(".editardoaparelho").toggle();
+				$(".divmudarip").toggle();
+			});
+			$("#salvar").click(function (a){
+				a.preventDefault();
+				$("#footerbtneditando").toggle();
+				$("#footerbtneditar").toggle();
+				$(".nomelistaambiente").toggle();
+				$(".editarnomelistaambiente").toggle();
+				$(".statusdoaparelho").toggle();
+				$(".editardoaparelho").toggle();
+				$(".divmudarip").toggle();
+			});
+		});
+</script>
+
+</body>
+</html>

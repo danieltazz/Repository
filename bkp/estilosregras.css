@@ -1,0 +1,377 @@
+p{
+	margin: 0;
+}
+
+html, body {
+	overflow: hidden;
+  font-family: sans-serif;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*{margin:0;
+padding: 0;}
+
+html {
+	width: 100%; height:100%; }
+body::-webkit-scrollbar {
+    width: 10px;
+    background: #eee;
+}
+body::-webkit-scrollbar-thumb {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #b0b0b0;
+}
+body::-webkit-scrollbar-track {
+    background: #eee;
+}
+body {
+	padding:0;
+	margin: 0;
+	width: 100%;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+	background-attachment: scroll;
+	min-width: 320px;
+	background-color: #ddd;
+}
+.contain{
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+#load{
+	width: 100%;
+	height: 100%;
+	position:fixed;
+	z-index: 9999;
+	background: url("img/Loading_icon.gif") no-repeat center center rgba(255,255,255,1);
+
+}
+#backmenus{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 3;
+}
+
+.headermenu{
+	z-index: 5;
+	background-color: #1e293b;
+	height:50px;
+	position: relative;
+	padding-left: 5px;
+    padding-right: 5px;
+}
+#btniconeCONFIG{
+	outline: none;
+	border: none;
+	background-color: transparent;
+	height: 100%;
+	float: left;
+	margin-right: 20px;
+}
+
+#iconeCONFIG{
+	height: 80%;
+	margin-top: 10%;
+}
+
+
+.btnmenusconfig{
+	width: 100%;
+	margin-bottom: 1px;
+	border-bottom: 1px solid #435d7a;
+	height: 5%;
+	max-height: 55px;
+    min-height: 40px;
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	background-color: #4e6c8e;
+}
+
+.btnmenusconfig:hover{
+border-right: 3px solid white;
+padding-right: 3px;
+}
+
+.btnmenusconfig:active{
+border-right: 7px solid white;
+padding-right: 7px;
+}
+
+
+.btnmenusconfig p{
+  	color: white;
+  	text-align: center;
+	margin: 0;
+	font-size: 1.2em;
+
+}
+
+#listamenudeconfig{
+	animation-name: fadeInLeft;
+	animation-duration: 150ms;
+	padding-top: 50px;
+	display: none;
+	background-image: linear-gradient(180deg,#4e6c8e,#435d7a);
+	margin-top: -50px;
+	height: 100%;
+	width: 40%;
+	min-height: 30px;
+	max-width: 150px;
+	z-index: 4;
+	position: absolute;
+	left: 0;
+    min-width: 128px;
+}
+
+#regras {
+	overflow-x: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+}
+
+#regras li a {
+	margin:0 2px;
+    display: block;
+    color: white;
+    text-align: center;
+	border-top: 5px solid #1e293b;
+    padding: 10px 16px 15px 16px;
+    text-decoration: none;
+    background-color:#1A2333;
+
+}
+#regras li a:hover {
+	background-color:#1A2333;
+}
+#regras li a:active {
+	background-color:#4CAF50;
+}
+#btnadd{
+    margin: 10px 0;
+    padding: 0 5px;
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    border: none;
+}
+#btnadd:active{
+	background-color: white;
+}
+#tipos{
+	align-items: center;
+	z-index: 2;
+    display: flex;
+    position: relative;
+    min-height: 40px;
+    max-height: 70px;
+    background-color: #bbb;
+    left: 0;
+    top: 0;
+}
+
+
+#tipos button{
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+#tipos button img{
+	height: 100%;
+}
+
+#tipos button:active{
+	background-color: #aaa;
+	border-top-left-radius: 11px;
+	border-top-right-radius: 11px;
+}
+
+#subtipos{
+	align-items: center;
+	z-index: 2;
+	overflow: auto;
+    position: relative;
+    display: flex;
+    min-height: 50px;
+    max-height: 90px;
+    background-color: #aaa;
+    left: 0;
+    top: 0;
+}
+
+#subtipos div{
+	margin: auto;
+}
+
+.row{
+	position: relative;
+	overflow: auto;
+    padding-left: 45px;
+    padding-bottom: 70px;
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+
+.in{
+	width: 5px;
+  	height: 5px;
+   	border-radius: 10px;
+    background-color: white;
+    margin: auto;
+    border:none;
+    padding: 4px;
+}
+
+.blocoslogicos{
+	margin:4px !important;
+	background-color: #4b6583;
+    border-radius: 15px;
+    height: 60px;
+    width: 60px;
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+}
+
+.imgblocoslogicos{
+	max-height: 40px;
+	max-width: 40px;
+	margin: auto 2px;
+}
+.imgblocoslogicosatuadores{
+	height: 40px;
+	width: 40px;
+	margin: auto 10px;
+}
+
+#divdrag {
+	width:80px;
+	height:80px;
+	padding:5px;
+	border:1px dashed #eee;}
+
+#back{
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    opacity: 0.7;
+    background-color: gray;
+    border-radius: 100%;
+    border: none;
+    left: 100%;
+    top: 100%;
+    margin: -70px -70px;
+    position: fixed;
+    padding: 5px;
+    border: none;
+
+}
+#back:hover{
+opacity: 0.9;
+}
+#back:active{
+opacity: 1;
+border: solid 2px white;
+padding: 3px;
+outline: none;
+
+}
+
+.popupselect{
+	width: 300px;
+	height: 300px;
+	z-index: 9;
+	position: fixed;
+	margin: calc(50% - 150px);
+	background-color:red; 
+}
+
+
+@media (min-width: 0){
+	#regras{
+		float: none;
+	}
+
+	#hipertipo{
+		z-index: 1;
+		width: 100%;
+    	height: 23%;
+    	max-height: 160px;
+    	min-height: 90px;
+    	display: inline;
+	}
+	#tipos{
+	padding: 0 15%;
+    width: 100%;
+    height: 9%;
+
+	}
+	#tipos button{
+	padding: 4px;
+	margin: auto;
+	height: 100%;
+	width: initial;
+	}
+
+	#subtipos{
+	padding: 4px 1%;
+    width: 100%;
+	}
+
+}
+
+@media (landscape){ /*min width 1024*/
+	#regras{
+		float: right;
+	}
+	.row{
+    position: absolute;
+    margin-left: 15%;
+    width: 85%;
+	}	
+	#hipertipo{
+		width: 14%;
+    	height: 100%;
+    	display: flex;
+    	max-height: 100%;
+	}
+	#tipos{
+    	padding: 1%;
+    	width: 45%;
+    	height: 100%;
+    	max-height: 100%;
+    	display: inline;
+	}
+
+	#tipos button{
+		margin: auto;
+		height: initial;
+		width: 100%;
+		padding: 4px;
+	}
+	#subtipos{
+		display: inline;
+    	max-height: 100%;
+		padding: 2%;
+		padding-bottom: 30%;
+    	width: 55%;
+    	height: 100%;
+	}
+	#subtipos img{
+		margin: auto;
+		width: 100%;
+		height: initial;
+	}
+}

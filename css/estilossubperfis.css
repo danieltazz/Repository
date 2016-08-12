@@ -1,0 +1,50 @@
+input[type=radio], input[type=checkbox] {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 50%;
+    margin: 0 !important;
+    -webkit-appearance: button;
+    background-color: #aa0027;
+   background-position: center;
+   background-size: cover;
+   background-image: url(../img/notchecked.svg);
+    color: #FFF;
+    white-space: nowrap;
+    float: right;
+    overflow: hidden;
+    outline: none !important;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+input[type=checkbox]:checked {
+   background-image: url(../img/checked.svg);
+    transition: 150ms;
+    background-color: #7cb731;
+}
+
+#salvarsubperfis {
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    background-color: #7cb731;
+    text-align: center;
+    margin: 10px auto;
+    bottom: 0;
+    width: 80px;
+    height: 30px;
+    color: white;
+}
+
+#salvarsubperfis:focus {
+    border: none;
+    outline: none;
+}
+
+a{
+   text-decoration: none !important;
+   cursor: pointer;
+}

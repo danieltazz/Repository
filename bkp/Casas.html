@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Domótica</title>
+  <!--link rel="stylesheet" href="bootstrap.min.css"-->
+  <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="estilosambiente.css">
+  <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+<div id="load"></div>
+<div id="backmenus" style="display:none;"></div>
+<div id="corgradiente">
+	<header class="headermenu">
+		<button id="btniconeCONFIG">
+			<svg id="iconeCONFIG" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.1 78.9"><defs><style>.cls-1{fill:#fff;}</style></defs><title>icone-CONFIG</title><path id="_Caminho_composto_" data-name="&lt;Caminho composto&gt;" class="cls-1" d="M76.9,32.7L72.2,32a34.36,34.36,0,0,0-3.8-9.3l2.8-3.8a2.89,2.89,0,0,0-.3-3.8L64.7,9a3,3,0,0,0-3.8-.3l-3.8,2.8a33.1,33.1,0,0,0-9.3-3.8L47.2,3A2.92,2.92,0,0,0,44.3.5H35.6A2.91,2.91,0,0,0,32.7,3L32,7.7a34.36,34.36,0,0,0-9.3,3.8L18.9,8.7a2.9,2.9,0,0,0-3.8.3L9,15.1a3,3,0,0,0-.3,3.8l2.8,3.8A33.1,33.1,0,0,0,7.7,32L3,32.7A2.92,2.92,0,0,0,.5,35.6v8.7A2.91,2.91,0,0,0,3,47.2l4.7,0.7a34.36,34.36,0,0,0,3.8,9.3L8.7,61A2.77,2.77,0,0,0,9,64.7l6.2,6.2a3,3,0,0,0,3.8.3l3.8-2.8a33.1,33.1,0,0,0,9.3,3.8l0.7,4.7a2.92,2.92,0,0,0,2.9,2.5h8.7a2.91,2.91,0,0,0,2.9-2.5L48,72.2a34.36,34.36,0,0,0,9.3-3.8l3.8,2.8a2.89,2.89,0,0,0,3.8-.3l6.2-6.2a3,3,0,0,0,.3-3.8l-2.8-3.8a33.1,33.1,0,0,0,3.8-9.3l4.7-.7a2.92,2.92,0,0,0,2.5-2.9V35.5A3.29,3.29,0,0,0,76.9,32.7ZM56.6,39.9V41a16.63,16.63,0,0,1-4.1,9.8,12.09,12.09,0,0,1-1.6,1.6,17.28,17.28,0,0,1-9.8,4.1H38.9a16.63,16.63,0,0,1-9.8-4.1,12.09,12.09,0,0,1-1.6-1.6A17.28,17.28,0,0,1,23.4,41V38.8A16,16,0,0,1,27.5,29a12.09,12.09,0,0,1,1.6-1.6,17.28,17.28,0,0,1,9.8-4.1h2.2a16.63,16.63,0,0,1,9.8,4.1A12.09,12.09,0,0,1,52.5,29a17.28,17.28,0,0,1,4.1,9.8A4,4,0,0,0,56.6,39.9Z" transform="translate(-0.5 -0.5)"/></svg></button>
+	</header>
+	<div id="listamenudeconfig">
+		<a href="ambiente.html">
+		<button class="btnmenusconfig">
+			<p>Controles</p>
+		</button>
+		</a>
+		<a href="sensores.html">
+		<button class="btnmenusconfig">
+			<p>Sensores</p>
+		</button>
+		</a>		
+		<button class="btnmenusconfig">
+			<p>Perfil</p>
+		</button>
+		<a href="Casas.html">
+		<button class="btnmenusconfig">
+			<p>Casas</p>
+		</button>
+		</a>
+		<a href="subperfis.html">
+		<button class="btnmenusconfig" >
+			<p>Sub-perfis</p>
+		</button>
+		</a>
+		<a href="regras.html">
+		<button class="btnmenusconfig">
+			<p>Regras</p>
+		</button>
+		</a>
+
+	</div>
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12" style="
+    padding: 0 5px;
+">
+	<ul class="ullistaambiente">
+		<li>
+		<button class="divlistaambiente btncasas">
+				<p class="pcasas">Casa1</p>
+		</button>
+		</li>
+
+		<li>
+		<button class="divlistaambiente btncasas">
+				<p class="pcasas">Casa2</p>
+		</button>
+		</li>
+	</ul>
+
+	</div>
+
+	</div>
+
+	</div>
+	</div>
+		<!-- jQuery -->
+	    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+
+
+			document.onreadystatechange = function(){
+				var state = document.readyState
+				if (state == 'complete'){
+					document.getElementById('interactive');
+					document.getElementById('load').style.visibility="hidden";
+				}
+			}
+
+
+		$(document).ready(function () {
+			$("#backmenus").click(function (a){
+				a.preventDefault();
+				$("#listamenudeconfig").toggle();
+				$("#backmenus").toggle();
+			});
+
+			$("#btniconeCONFIG").click(function (a){
+				a.preventDefault();
+				$("#listamenudeconfig").toggle();
+				$("#backmenus").toggle();
+			});
+
+		});
+		</script>
+</body>
+</html>

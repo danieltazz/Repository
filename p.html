@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">		
+    </head>
+    <body>
+        <a onclick="btnon();">Clique aqui</a>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            function btnon() {
+                $.ajax({
+                    type: "POST",
+                    url: "http://10.7.220.176/0",
+                    crossDomain: true,
+                    cache: false,
+                    success: function (data) {
+                        alert(data);
+                    },
+                    error: function () {
+                        alert("Você falhou na vida!\nTente novamente.");
+                    },
+                });
+            }
+        </script>
+    </body>
+</html>

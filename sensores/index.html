@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/controllers/MainController.js"></script>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta charset="utf-8"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta content="no" name="msapplication-tap-highlight"/>
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <title>
+            Domótica
+        </title>
+            <!--link rel="stylesheet" href="bootstrap.min.css"-->
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../css/estilosambiente.css" rel="stylesheet"/>
+        <link href="../css/animate.css" rel="stylesheet"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+        </script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+        </script>
+    </head>
+    <body ng-app="myApp">
+        <div id="load" style="cursor:wait;">
+        </div>
+        <div id="backmenus" style="display: none;">
+        </div>
+        <div id="corgradiente" ng-controller="MainController">
+            <header class="headermenu">
+                <button id="btniconeCONFIG">
+                    <svg data-name="Camada 1" id="iconeCONFIG" viewbox="0 0 79.1 78.9" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                                .cls-1{fill:#fff;}
+                            </style>
+                        </defs>
+                        <title>
+                            icone-CONFIG
+                        </title>
+                        <path class="cls-1" d="M76.9,32.7L72.2,32a34.36,34.36,0,0,0-3.8-9.3l2.8-3.8a2.89,2.89,0,0,0-.3-3.8L64.7,9a3,3,0,0,0-3.8-.3l-3.8,2.8a33.1,33.1,0,0,0-9.3-3.8L47.2,3A2.92,2.92,0,0,0,44.3.5H35.6A2.91,2.91,0,0,0,32.7,3L32,7.7a34.36,34.36,0,0,0-9.3,3.8L18.9,8.7a2.9,2.9,0,0,0-3.8.3L9,15.1a3,3,0,0,0-.3,3.8l2.8,3.8A33.1,33.1,0,0,0,7.7,32L3,32.7A2.92,2.92,0,0,0,.5,35.6v8.7A2.91,2.91,0,0,0,3,47.2l4.7,0.7a34.36,34.36,0,0,0,3.8,9.3L8.7,61A2.77,2.77,0,0,0,9,64.7l6.2,6.2a3,3,0,0,0,3.8.3l3.8-2.8a33.1,33.1,0,0,0,9.3,3.8l0.7,4.7a2.92,2.92,0,0,0,2.9,2.5h8.7a2.91,2.91,0,0,0,2.9-2.5L48,72.2a34.36,34.36,0,0,0,9.3-3.8l3.8,2.8a2.89,2.89,0,0,0,3.8-.3l6.2-6.2a3,3,0,0,0,.3-3.8l-2.8-3.8a33.1,33.1,0,0,0,3.8-9.3l4.7-.7a2.92,2.92,0,0,0,2.5-2.9V35.5A3.29,3.29,0,0,0,76.9,32.7ZM56.6,39.9V41a16.63,16.63,0,0,1-4.1,9.8,12.09,12.09,0,0,1-1.6,1.6,17.28,17.28,0,0,1-9.8,4.1H38.9a16.63,16.63,0,0,1-9.8-4.1,12.09,12.09,0,0,1-1.6-1.6A17.28,17.28,0,0,1,23.4,41V38.8A16,16,0,0,1,27.5,29a12.09,12.09,0,0,1,1.6-1.6,17.28,17.28,0,0,1,9.8-4.1h2.2a16.63,16.63,0,0,1,9.8,4.1A12.09,12.09,0,0,1,52.5,29a17.28,17.28,0,0,1,4.1,9.8A4,4,0,0,0,56.6,39.9Z" data-name="<Caminho composto>" id="_Caminho_composto_" transform="translate(-0.5 -0.5)">
+                        </path>
+                    </svg>
+                </button>
+                <button id="btniconeCOMODOS">
+                    <svg data-name="Camada 1" id="iconeCOMODOS" viewbox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                                .cls-1{fill:#fff;}
+                            </style>
+                        </defs>
+                        <title>
+                            icone-COMODOS
+                        </title>
+                        <g data-name="<Grupo>" id="_Grupo_">
+                            <rect class="cls-1" data-name="<Caminho>" height="16" id="_Caminho_" width="80">
+                            </rect>
+                            <rect class="cls-1" data-name="<Caminho>" height="16" id="_Caminho_2" width="80" y="32">
+                            </rect>
+                            <rect class="cls-1" data-name="<Caminho>" height="16" id="_Caminho_3" width="80" y="64">
+                            </rect>
+                        </g>
+                    </svg>
+                </button>
+                <div id="nomedocomodo">
+                    <p>
+                        All
+                    </p>
+                </div>
+            </header>
+            <div class="animated slideInRight" id="listamenudecomodos" style="display: none; animation-duration: 150ms;">
+                <ul>
+                    <li>
+                        <button class="btnmenuscomodos comodoactive" id="allc">
+                            <p>
+                                All
+                            </p>
+                        </button>
+                    </li>
+                    <li ng-repeat="comodo in comodos">
+                        <button class="btnmenuscomodos" id="{{comodo}}">
+                            <p>
+                                {{comodo}}
+                            </p>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div id="listamenudeconfig" style="display: none;">
+                <a href="../index.html">
+                    <button class="btnmenusconfig">
+                        <p>
+                            Controles
+                        </p>
+                    </button>
+                </a>
+                <a href="../sensores/index.html">
+                    <button class="btnmenusconfig">
+                        <p>
+                            Sensores
+                        </p>
+                    </button>
+                </a>
+                <button class="btnmenusconfig">
+                    <p>
+                        Perfil
+                    </p>
+                </button>
+                <a href="../casas/index.html">
+                    <button class="btnmenusconfig">
+                        <p>
+                            Casas
+                        </p>
+                    </button>
+                </a>
+                <a href="../subperfis/index.html">
+                    <button class="btnmenusconfig">
+                        <p>
+                            Sub-perfis
+                        </p>
+                    </button>
+                </a>
+                <a href="../regras/index.html">
+                    <button class="btnmenusconfig">
+                        <p>
+                            Regras
+                        </p>
+                    </button>
+                </a>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12" style="
+                         padding: 0 5px;
+                         ">
+                        <ul id="ullistaambiente">
+                            <li class="{{sensor.comodo}}" ng-repeat="sensor in sensores">
+                                <div class="divlistaambiente">
+                                    <div class="col-xs-6">
+                                        <div ng-show="! showDetails" class="nomelistaambiente" style="display: flex;">
+                                            <p>
+                                                {{sensor.name}}
+                                            </p>
+                                        </div>
+                                        <div class="editarnomelistaambiente" ng-show="showDetails">
+                                            <input class="inputdoeditarnome" ng-model="sensor.name" placeholder="{{sensor.name}}" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="statusdoaparelho">
+                                            <button class="btnright editar" ng-show="! showDetails" ng-click="showDetails = ! showDetails"style="display: block;">
+                                                <p>
+                                                    Editar
+                                                </p>
+                                            </button>
+                                            <button class="btnright on" ng-show="showDetails" ng-click="showDetails = ! showDetails">
+                                                <p>
+                                                    Salvar
+                                                </p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editarsensor divlistaambiente" ng-show="showDetails">
+                                    <div class="animated fadeIn">
+                                        <div>
+                                            <select ng-model="sensor.comodo" ng-options="item for item in comodos" name="comodo">
+                                            </select>
+                                        </div>
+                                        <div>
+                                            Ciclo:
+                                            <input ng-model="sensor.ciclo_h" name="horas" placeholder="hora" style="width:50px; " type="number"></input>
+                                                :
+                                            <input ng-model="sensor.ciclo_m" name="min" placeholder="min" type="number"></input>
+                                                    :
+                                            <input ng-model="sensor.ciclo_s" name="seg" placeholder="seg" type="number"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="{{sensor.comodo}}" ng-repeat="sensor in sensoreseditar">
+                                <div class="divlistaambiente">
+                                    <div class="col-xs-6">
+                                        <div ng-show="! showDetails" class="nomelistaambiente" style="display: flex;">
+                                            <p>
+                                                {{sensor.name}}
+                                            </p>
+                                        </div>
+                                        <div class="editarnomelistaambiente" ng-show="showDetails">
+                                            <input class="inputdoeditarnome" ng-model="sensor.name" placeholder="{{sensor.name}}" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="statusdoaparelho">
+                                            <button class="btnright off" ng-show="! showDetails" ng-click="showDetails = ! showDetails"style="display: block;">
+                                                <p>
+                                                    Cadastrar
+                                                </p>
+                                            </button>
+                                            <button class="btnright on" ng-show="showDetails" ng-click="showDetails = ! showDetails">
+                                                <p>
+                                                    Salvar
+                                                </p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editarsensor divlistaambiente" ng-show="showDetails">
+                                    <div class="animated fadeIn">
+                                        <div>
+                                            <select ng-model="sensor.comodo" ng-options="item for item in comodos" name="comodo">
+                                            </select>
+                                        </div>
+                                        <div>
+                                            Ciclo:
+                                            <input ng-model="sensor.ciclo_h" name="horas" placeholder="hora" style="width:50px; " type="number"></input>
+                                                :
+                                            <input ng-model="sensor.ciclo_m" name="min" placeholder="min" type="number"></input>
+                                                    :
+                                            <input ng-model="sensor.ciclo_s" name="seg" placeholder="seg" type="number"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- jQuery -->
+<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<script type="text/javascript">
+$( document ).ready(function() {
+    var $btnss = $('.btnmenuscomodos').on('click', function() {
+      if (this.id == 'allc') {
+        $('#ullistaambiente > li').removeClass('somecomodo');
+        $( "#nomedocomodo" ).html( "All");
+      } else{
+        var $el = $('.' + this.id ).removeClass('somecomodo');
+        $('#ullistaambiente > li').not($el).addClass('somecomodo');
+        $( "#nomedocomodo" ).html( this.id );
+      }
+      $btnss.removeClass('comodoactive');
+        $(this).addClass('comodoactive');
+        });
+    var $btns = $('.btndalistadeservicosporcomodo').click(function() {
+      if (this.id == 'allf') {
+        $('#ullistaambiente > li').removeClass('somefilter');
+      } else{
+        var $el = $('.' + this.id ).removeClass('somefilter');
+        $('#ullistaambiente > li').not($el).addClass('somefilter');
+      }
+      $btns.removeClass('filtrado');
+      $(this).addClass('filtrado');
+    })
+});
+</script>
+<script src="../js/menus.js"></script>
+<script type="text/javascript">
+            $(document).ready(function () {
+            $.ajax({
+                type: "POST",
+                url: "http://10.7.220.161/t",
+                crossDomain: true,
+                cache: false,
+                success: function (data) {
+                    alert(data);
+                    document.getElementById("temperatura").innerHTML = "26" + "º";
+
+                },
+                error: function () {
+                },
+            });
+        });
+</script>
+<!--<script src="ambiente.js"></script>-->

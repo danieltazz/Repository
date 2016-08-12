@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/controllers/MainController.js"></script>
+    <head>
+            <meta charset="utf-8"/>
+            <meta content="telephone=no" name="format-detection"/>
+            <meta content="no" name="msapplication-tap-highlight"/>
+            <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+            <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+            <title>
+                Domótica
+            </title>
+            <!--link rel="stylesheet" href="bootstrap.min.css"-->
+            <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+            </script>
+            <link href="../css/estilosregras.css" rel="stylesheet"/>
+            <link href="../css/animate.css" rel="stylesheet"/>
+            <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+            <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+            <script type="text/javascript" src="simcir.js"></script>
+            <link rel="stylesheet" type="text/css" href="simcir.css" />
+            <script type="text/javascript" src="simcir-basicset.js"></script>
+            <link rel="stylesheet" type="text/css" href="simcir-basicset.css" />
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+            </script>
+            <script src="../js/menus.js"></script>
+                <script type="text/javascript">
+                    $(function() {
+
+                      var $s = simcir;
+
+                      var $simcir = $('#mySimcir');
+
+                      var getCircuitData = function() {
+                        return $s.controller(
+                            $simcir.find('.simcir-workspace') ).text();
+                      };
+                      var setCircuitData = function(data) {
+                        $simcir.children().remove();
+                        $s.setupSimcir($simcir, JSON.parse(data) );
+                      };
+
+                      // button click events
+                      $('#getDataBtn').click(function() {
+                        $('#dataArea').val(getCircuitData() );
+                      });
+                      $('#setDataBtn').click(function() {
+                        setCircuitData($('#dataArea').val() );
+                      });
+                      $('#conjuntoregras').click(function() {
+                        setCircuitData($('#dataArea').val() );
+                        $('#dataArea').val(getCircuitData() );
+                      });
+
+                      // load default (just specifies circuit size).
+                      setCircuitData('{ "width":600, "height":200 }');
+                    });
+                </script>
+                <script type="text/javascript">
+                $( document ).ready(function() {
+                    
+
+                      var $s = simcir;
+
+                      var $simcir = $('#mySimcir');
+
+                    var $btnss = $('.conjuntoregras').on('click', function() {
+                      $simcir.children().remove();
+                        $s.setupSimcir($simcir, JSON.parse(this.code) );
+                      $btnss.removeClass('regraactive');
+                        $(this).addClass('regraactive');
+                    });
+                });
+                </script>
+    </head>
+    <body ng-app="myApp">
+        <div id="load" style="cursor:wait;">
+        </div>
+        <div id="backmenus" style="display:none;">
+        </div>
+        <div ng-controller="MainController">
+        <header class="headermenu">
+            <button id="btniconeCONFIG">
+                <img id="iconeCONFIG" src="../img/icone-CONFIG.svg"/>
+            </button>
+            <ul id="regras">
+                <li ng-repeat="regra in regras">
+                    <button class="conjuntoregras" id="{{regra.name}}">
+                        {{regra.name}}
+                    </button>
+                </li>
+                <li>
+                    <button id="btnadd">
+                        <img src="../img/add.svg"/>
+                    </button>
+                </li>
+            </ul>
+        </header>
+        <div id="listamenudeconfig" style="display: none;">
+            <a href="../index.html">
+                <button class="btnmenusconfig">
+                    <p>
+                        Controles
+                    </p>
+                </button>
+            </a>
+            <a href="../sensores/index.html">
+                <button class="btnmenusconfig">
+                    <p>
+                        Sensores
+                    </p>
+                </button>
+            </a>
+            <button class="btnmenusconfig">
+                <p>
+                    Perfil
+                </p>
+            </button>
+            <a href="../casas/index.html">
+                <button class="btnmenusconfig">
+                    <p>
+                        Casas
+                    </p>
+                </button>
+            </a>
+            <a href="../subperfis/index.html">
+                <button class="btnmenusconfig">
+                    <p>
+                        Sub-perfis
+                    </p>
+                </button>
+            </a>
+            <a href="../regras/index.html">
+                <button class="btnmenusconfig">
+                    <p>
+                        Regras
+                    </p>
+                </button>
+            </a>
+        </div>
+        
+            <div id="mySimcir"></div>
+            <div>
+              <button id="getDataBtn">v get data v</button>
+              <button id="setDataBtn">^ set data ^</button>
+            </div>
+            <textarea id="dataArea" style="width:600px; height:200px;"></textarea>
+        </div>
+        <!-- jQuery -->
+        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript">
+            var idregras = 1;
+                    function allowDrop(ev) {
+                        ev.preventDefault();
+                    }
+
+                    function drag(ev) {
+                        ev.dataTransfer.setData("text/html", ev.target.id);
+                    }
+
+                    function drop(ev) {
+                        ev.preventDefault();
+                        alert(document.getElementById(data));
+                        var str = document.getElementById(data);
+                        var patt1 = /[1-9999999]/;
+                        var result = str.match(patt1);
+                        if (result != null) {
+                            /* The default handling is not to process a drop action and hand it to the next
+                             higher html element in your DOM. */
+                            /* Here, we prevent the default behaviour in order to process the event within
+                             this handler and to stop further propagation of the event. */
+                            /* In the drag event, we set the *variable* (it is not a variable name but a
+                             format, please check the reference!) "text/html", now we read it out */
+                            var data = ev.dataTransfer.getData("text/html");
+                            /* As we put the ID of the source element into this variable, we can now use
+                             this ID to manipulate the dragged element as we wish. */
+                            /* Let's just move it through the DOM and append it here */
+                            ev.target.appendChild(document.getElementById(data));
+                        } else {
+                            var data = ev.dataTransfer.getData("text/html");
+                            /* If you use DOM manipulation functions, their default behaviour it not to
+                             copy but to alter and move elements. By appending a ".cloneNode(true)",
+                             you will not move the original element, but create a copy. */
+                            var nodeCopy = document.getElementById(data).cloneNode(true);
+                            nodeCopy.id = fatherid + idregras;
+                            idregras++;
+                            ev.target.appendChild(nodeCopy);
+                        }
+                    }
+                    $(document).ready(function () {
+                        $("#editar").click(function (a) {
+                            a.preventDefault();
+                            $("#footerbtneditando").toggle();
+                            $("#footerbtneditar").toggle();
+                            $(".nomelistaambiente").toggle();
+                            $(".editarnomelistaambiente").toggle();
+                            $(".statusdoaparelho").toggle();
+                            $(".editardoaparelho").toggle();
+                            $(".divmudarip").toggle();
+                        });
+                        $("#salvar").click(function (a) {
+                            a.preventDefault();
+                            $("#footerbtneditando").toggle();
+                            $("#footerbtneditar").toggle();
+                            $(".nomelistaambiente").toggle();
+                            $(".editarnomelistaambiente").toggle();
+                            $(".statusdoaparelho").toggle();
+                            $(".editardoaparelho").toggle();
+                            $(".divmudarip").toggle();
+                        });
+                    });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,177 @@
+html, body {
+    font-family: sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#load {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: url("img/Loading_icon.gif") no-repeat center center rgba(255, 255, 255, 1);
+}
+
+#corgradiente {
+    position: relative;
+    min-height: 390px;
+    min-width: 320px;
+    height: 100%;
+    background-image: linear-gradient(135deg, #98c9da, #4e6c8e);
+}
+
+.container {
+    position: absolute;
+    height: 334px;
+    width: 320px;
+    top: 50%;
+    margin-top: -157px;
+    left: 50%;
+    margin-left: -160px;
+}
+
+#navmenu {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: #1e293b;
+}
+
+#navmenu ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    display: flex;
+}
+
+#navmenu ul li a {
+    margin: 0 2px;
+    display: block;
+    color: white;
+    text-align: center;
+    border-top: 5px solid #1e293b;
+    padding: 10px 16px 15px 16px;
+    text-decoration: none;
+}
+
+#navmenu ul li a:hover {
+    background-color: #1A2333;
+}
+
+#navmenu ul li a:active {
+    background-color: #4CAF50;
+}
+
+#pwd {
+    width: 260px;
+    margin: 0;
+}
+
+#eye {
+    border-radius: 4px;
+    opacity: 0.7;
+    background-color: #4e6c8e;
+    border: none;
+    width: 20px;
+    height: 20px;
+    outline: 0;
+    padding: 0;
+    margin: none;
+}
+
+#eye:hover {
+    opacity: 0.8;
+}
+
+#eye:active {
+    opacity: 1;
+}
+
+.botao:active {
+    background-color: #98c9da;
+    border-left-style: solid;
+    border-left-width: 7px;
+    border-left-color: white;
+    padding-left: 3px;
+    box-shadow: 0;
+}
+
+.botao {
+    border-radius: 0px;
+    width: 290px;
+    margin-bottom: 10px;
+    background-color: #98c9da;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    color: #1e293b;
+}
+
+.botaoajuda {
+    opacity: 0.6;
+    margin: 10px 8px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 4px 9px;
+    font-size: 12px;
+    color: white;
+    border-radius: 0px;
+}
+
+.botaoajuda:hover {
+    opacity: 0.8;
+}
+
+.botaoajuda:active {
+    opacity: 1;
+}
+
+.logomarca {
+    position: relative;
+    height: 150px;
+}
+
+.logomarca img {
+    align-self: center;
+    max-height: 100%
+}
+
+.login {
+    position: relative;
+    width: 300px;
+    height: 143px;
+}
+
+input {
+    width: 290px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 2px;
+}
